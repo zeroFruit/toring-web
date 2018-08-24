@@ -5,48 +5,61 @@ import { Page } from "./components/Page";
 
 const FlipPage = require("react-flip-page").default;
 
+export type Direction = "prev" | "next";
+
 interface IStorybookProps {
     pages: List<PageProps>;
-    width: number;
-    height: number;
+    width?: string;
+    height?: string;
     animationDuration: number;
+    onPageChange(page: number, direction: Direction): void;
 }
 
-const storybookStyles = {
-    position: "relative",
-    left: 0,
-    right: 0,
-    bottom: 0,
-    top: 0
-};
-
 class Storybook extends React.PureComponent<IStorybookProps> {
+    private self?: React.Component;
+
     public render() {
-        const { width, height, animationDuration } = this.props;
+        const { width, height, animationDuration, onPageChange } = this.props;
         return (
             <FlipPage
+                ref={(self: React.Component): void => {
+                    this.self = self;
+                }}
                 orientation={"horizontal"}
                 animationDuration={animationDuration}
                 flipOnTouch={true}
                 showTouchHint={true}
                 showSwipeHint={true}
-                style={storybookStyles}
-                width={width}
-                height={height}
+                style={{
+                    flex: 1,
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width,
+                    height
+                }}
+                onPageChange={(page: any, direction: any) => onPageChange(page, direction)}
             >
-                {[
-                    <Page key={this.props.pages.get(0).id} page={this.props.pages.get(0)} />,
-                    <Page key={this.props.pages.get(1).id} page={this.props.pages.get(1)} />,
-                    <Page key={this.props.pages.get(2).id} page={this.props.pages.get(2)} />,
-                    <Page key={this.props.pages.get(3).id} page={this.props.pages.get(3)} />
-                ]}
+                {this.renderPages()}
             </FlipPage>
         );
     }
 
-    // private renderPages() {
-    //     return this.props.pages.map((page: PageProps) => <Page key={page.id} page={page} />);
-    // }
+    public gotoPrevPage(): void {
+        (this.self as any).gotoPreviousPage();
+    }
+
+    public gotoNextPage(): void {
+        (this.self as any).gotoNextPage();
+    }
+
+    private renderPages(): any[] {
+        const pages: any[] = [];
+        this.props.pages.forEach((page: PageProps) => {
+            pages.push(<Page key={page.id} page={page} />);
+        });
+
+        return pages;
+    }
 }
 
 export default Storybook;
