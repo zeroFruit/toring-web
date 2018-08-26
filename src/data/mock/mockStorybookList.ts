@@ -17,7 +17,7 @@ storybookList = storybookList.push(
                 srcSet: List<SrcProps>([
                     new SrcProps({
                         id: 1,
-                        url: "https://dummyimage.com/240x240/000/fff.png"
+                        url: "http://localhost:8080/previews/thumb01.jpg"
                     })
                 ]),
                 placeholder: ""
@@ -48,7 +48,7 @@ storybookList = storybookList.push(
                 srcSet: List<SrcProps>([
                     new SrcProps({
                         id: 2,
-                        url: "https://dummyimage.com/240x240/000/fff.png"
+                        url: "http://localhost:8080/previews/thumb02.jpg"
                     })
                 ]),
                 placeholder: ""
@@ -79,7 +79,7 @@ storybookList = storybookList.push(
                 srcSet: List<SrcProps>([
                     new SrcProps({
                         id: 3,
-                        url: "https://dummyimage.com/240x240/000/fff.png"
+                        url: "http://localhost:8080/previews/thumb03.jpg"
                     })
                 ]),
                 placeholder: ""
@@ -110,7 +110,7 @@ storybookList = storybookList.push(
                 srcSet: List<SrcProps>([
                     new SrcProps({
                         id: 4,
-                        url: "https://dummyimage.com/240x240/000/fff.png"
+                        url: "http://localhost:8080/previews/thumb04.jpg"
                     })
                 ]),
                 placeholder: ""
@@ -141,7 +141,7 @@ storybookList = storybookList.push(
                 srcSet: List<SrcProps>([
                     new SrcProps({
                         id: 5,
-                        url: "https://dummyimage.com/240x240/000/fff.png"
+                        url: "http://localhost:8080/previews/thumb05.jpg"
                     })
                 ]),
                 placeholder: ""
@@ -172,7 +172,7 @@ storybookList = storybookList.push(
                 srcSet: List<SrcProps>([
                     new SrcProps({
                         id: 6,
-                        url: "https://dummyimage.com/240x240/000/fff.png"
+                        url: "http://localhost:8080/previews/thumb06.jpg"
                     })
                 ]),
                 placeholder: ""
@@ -203,7 +203,7 @@ storybookList = storybookList.push(
                 srcSet: List<SrcProps>([
                     new SrcProps({
                         id: 7,
-                        url: "https://dummyimage.com/240x240/000/fff.png"
+                        url: "http://localhost:8080/previews/thumb07.jpg"
                     })
                 ]),
                 placeholder: ""
@@ -234,7 +234,7 @@ storybookList = storybookList.push(
                 srcSet: List<SrcProps>([
                     new SrcProps({
                         id: 8,
-                        url: "https://dummyimage.com/240x240/000/fff.png"
+                        url: "http://localhost:8080/previews/thumb08.jpg"
                     })
                 ]),
                 placeholder: ""
@@ -265,7 +265,7 @@ storybookList = storybookList.push(
                 srcSet: List<SrcProps>([
                     new SrcProps({
                         id: 9,
-                        url: "https://dummyimage.com/240x240/000/fff.png"
+                        url: "http://localhost:8080/previews/thumb09.jpg"
                     })
                 ]),
                 placeholder: ""
@@ -296,7 +296,7 @@ storybookList = storybookList.push(
                 srcSet: List<SrcProps>([
                     new SrcProps({
                         id: 10,
-                        url: "https://dummyimage.com/240x240/000/fff.png"
+                        url: "http://localhost:8080/previews/thumb10.jpg"
                     })
                 ]),
                 placeholder: ""

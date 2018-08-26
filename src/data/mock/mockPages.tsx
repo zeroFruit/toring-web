@@ -6,35 +6,35 @@ let pageList = List<PageProps>();
 pageList = pageList.push(
     new PageProps({
         id: 1,
-        url: "https://placeimg.com/960/540/animals"
+        url: "http://localhost:8080/storybook/storybook01.jpg"
     })
 );
 
 pageList = pageList.push(
     new PageProps({
         id: 2,
-        url: "https://placeimg.com/960/540/tech"
+        url: "http://localhost:8080/storybook/storybook02.jpg"
     })
 );
 
 pageList = pageList.push(
     new PageProps({
         id: 3,
-        url: "https://placeimg.com/960/540/nature"
+        url: "http://localhost:8080/storybook/storybook03.jpg"
     })
 );
 
 pageList = pageList.push(
     new PageProps({
         id: 4,
-        url: "https://placeimg.com/960/540/arch"
+        url: "http://localhost:8080/storybook/storybook04.jpg"
     })
 );
 
 pageList = pageList.push(
     new PageProps({
         id: 5,
-        url: "https://placeimg.com/960/540/people"
+        url: "http://localhost:8080/storybook/storybook05.jpg"
     })
 );
 

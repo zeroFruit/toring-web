@@ -1,1 +1,1 @@
-export {default as AboutContentRight} from './AboutContentRight';
+export { default as AboutContentRight } from "./AboutContentRight";

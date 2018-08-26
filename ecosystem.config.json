@@ -1,0 +1,10 @@
+{
+  "apps" : [{
+    "name"   : "toring-web",
+    "script" : "node_modules/serve/bin/serve.js",
+    "args": "-p 3000 -s build",
+    "env_production": {
+      "NODE_ENV": "production"
+    }
+  }]
+}

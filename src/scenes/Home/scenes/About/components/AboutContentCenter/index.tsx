@@ -1,1 +1,1 @@
-export {default as AboutContentCenter} from './AboutContentCenter';
+export { default as AboutContentCenter } from "./AboutContentCenter";

@@ -6,7 +6,10 @@ interface IStorybookPreviewWrapper {
     marginTop: number;
     paddingHorizontal: number;
 }
-const StorybookPreviewWrapper = styled<IStorybookPreviewWrapper, "div" & React.HTMLProps<HTMLDivElement>>("div")`
+const StorybookPreviewWrapper = styled<
+    IStorybookPreviewWrapper,
+    "div" & React.HTMLProps<HTMLDivElement>
+>("div")`
     display: flex;
     margin-top: ${props => props.marginTop}rem;
     padding: 0 ${props => props.paddingHorizontal}rem;
