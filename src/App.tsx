@@ -4,7 +4,6 @@ import { Home } from "scenes/Home";
 import { Viewer } from "scenes/Viewer";
 import { Route, Switch } from "react-router-dom";
 import styled, { injectGlobal } from "services/styled-components";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { History } from "history";
 
 injectGlobal`
@@ -48,14 +47,10 @@ class App extends React.Component<IAppProps> {
         const { history } = this.props;
         return (
             <Wrapper>
-                <TransitionGroup>
-                    <CSSTransition key={history.location.key} classNames={"fade"} timeout={{ enter: 300, exit: 300 }}>
-                        <Switch>
-                            <Route path="/" exact={true} component={Home} />
-                            <Route path={"/viewer"} component={Viewer} />
-                        </Switch>
-                    </CSSTransition>
-                </TransitionGroup>
+                <Switch>
+                    <Route path="/" exact={true} component={Home} />
+                    <Route path={"/viewer"} component={Viewer} history={history} />
+                </Switch>
             </Wrapper>
         );
     }

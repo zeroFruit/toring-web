@@ -25,7 +25,6 @@ export default handleActions<StorybooksState, any>(
             action: Action<List<StorybookProps>>
         ): StorybooksState => {
             return state.withMutations(s => {
-                console.log("This is action");
                 return s.set(
                     "storybooks",
                     List<StorybookProps>(action.payload as List<StorybookProps>)

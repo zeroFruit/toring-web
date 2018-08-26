@@ -7,14 +7,14 @@ import { AboutContentRight } from "./components/AboutContentRight"
 const backgroundImage = require("./data/images/about_background.jpg") as ILQIP;
 
 interface IAboutContainerProps {
-  height: number;
-  backgroundUrl: string;
+    height: number;
+    backgroundUrl: string;
 }
 
 interface ILQIP {
-  preSrc: string;
-  palette: string[];
-  src: string;
+    preSrc: string;
+    palette: string[];
+    src: string;
 }
 
 const AboutContainer = styled<
