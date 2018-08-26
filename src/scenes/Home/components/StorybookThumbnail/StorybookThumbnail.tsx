@@ -7,10 +7,12 @@ interface IThumbnailImageProps {
     width: number;
     height: number;
 }
-const ThumbnailImage = styled<IThumbnailImageProps, "img" & React.HTMLProps<HTMLImageElement>>("img")`
+const ThumbnailImage = styled<IThumbnailImageProps, "img" & React.HTMLProps<HTMLImageElement>>(
+    "img"
+)`
     display: flex;
-    width: ${props => props.width}px;
-    height: ${props => props.height}px;
+    width: 250px;
+    height: 250px;
 `;
 
 interface IStorybookThumbnailProps {
@@ -21,7 +23,11 @@ interface IStorybookThumbnailProps {
 
 // https://dummyimage.com/240x240/000/fff.png
 
-const StorybookThumbnail: React.SFC<IStorybookThumbnailProps> = ({ storybookID, previews, onClick }) => {
+const StorybookThumbnail: React.SFC<IStorybookThumbnailProps> = ({
+    storybookID,
+    previews,
+    onClick
+}) => {
     return <ThumbnailImage src={previews[0].srcSet[0].url} onClick={() => onClick(storybookID)} />;
 };
 
