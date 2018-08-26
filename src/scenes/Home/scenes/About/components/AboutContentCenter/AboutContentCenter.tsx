@@ -32,10 +32,11 @@ const AboutContentCenter = () => {
     <div>
       <ContentImg src={contentImageCenter.src} alt={"toring"} />
       <ContentTitle>
-        Do not wait more.
+        Just choose and create.
       </ContentTitle>
       <ContentDetail>
-        언제, 어디서나 당신은 훌륭한 그림책 작가가 될 수 있습니다. 지금 토링과 함께하세요.
+        토링은 복잡하지 않습니다. 토링에는 글 작가와 그림 작가들이 협업자를 기다리고 있습니다.
+        마음에 드는 작가와 함께 작품을 완성하고 토링의 독자들과 만나세요.
       </ContentDetail>
     </div>
   );
