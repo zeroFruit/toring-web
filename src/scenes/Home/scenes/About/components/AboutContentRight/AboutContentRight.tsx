@@ -19,7 +19,7 @@ const ContentDetail = styled<{}, "div" & React.HTMLProps<HTMLDivElement>>("div")
 const AboutContentRight = () => {
     return (
         <div>
-            <ContentImg src={require("./hat.png")} alt={"toring"} />
+            <ContentImg src={require("./hat.png").src} alt={"toring"} />
             <ContentTitle>Life comes story, Story comes life</ContentTitle>
             <ContentDetail>
                 토링은 당신의 특별한 삶을 이야기로 만들어 드립니다. 당신의 이야기로 더 많은

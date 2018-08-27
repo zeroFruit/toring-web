@@ -40,7 +40,7 @@ class About extends React.PureComponent {
         return (
             <AboutContainer
                 height={29.33}
-                backgroundUrl={require("./data/images/about_background.jpg")}
+                backgroundUrl={require("./data/images/about_background.jpg").src}
             >
                 <ContentWrapper>
                     <AboutContentLeft />

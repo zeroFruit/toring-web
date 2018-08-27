@@ -19,7 +19,7 @@ const ContentDetail = styled<{}, "div" & React.HTMLProps<HTMLDivElement>>("div")
 const AboutContentCenter = () => {
     return (
         <div>
-            <ContentImg src={require("./pencil.png")} alt={"toring"} />
+            <ContentImg src={require("./pencil.png").src} alt={"toring"} />
             <ContentTitle>Just choose and create.</ContentTitle>
             <ContentDetail>
                 토링은 복잡하지 않습니다. 토링에는 글 작가와 그림 작가들이 협업자를 기다리고

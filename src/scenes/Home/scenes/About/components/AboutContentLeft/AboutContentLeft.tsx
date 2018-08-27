@@ -19,7 +19,7 @@ const ContentDetail = styled<{}, "div" & React.HTMLProps<HTMLDivElement>>("div")
 const AboutContentLeft = () => {
     return (
         <div>
-            <ContentImg src={require("./ribbon.png")} alt={"toring"} />
+            <ContentImg src={require("./ribbon.png").src} alt={"toring"} />
             <ContentTitle>Do not wait more.</ContentTitle>
             <ContentDetail>
                 언제, 어디서나 당신은 훌륭한 그림책 작가가 될 수 있습니다. 지금 토링과 함께하세요.
