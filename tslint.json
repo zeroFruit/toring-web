@@ -17,6 +17,22 @@
     "no-console": false,
     "max-classes-per-file": false,
     "no-unused-expression": false,
-    "object-literal-shorthand": false
+    "object-literal-shorthand": false,
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "public-static-field",
+          "public-instance-field",
+          "private-static-field",
+          "private-instance-field",
+          "public-constructor",
+          "private-constructor",
+          "public-instance-method",
+          "protected-instance-method",
+          "private-instance-method"
+        ]
+      }
+    ]
   }
 }

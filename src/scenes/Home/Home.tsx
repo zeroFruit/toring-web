@@ -18,6 +18,18 @@ interface ISectionWrapperProps {
 }
 
 const SectionWrapper = styled<ISectionWrapperProps, "div" & React.HTMLProps<HTMLDivElement>>("div")`
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: ${props => props.marginBottom}rem;
+`;
+
+const StorybookListWrapper = styled<ISectionWrapperProps, "div" & React.HTMLProps<HTMLDivElement>>(
+    "div"
+)`
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     margin-bottom: ${props => props.marginBottom}rem;
 `;
 
@@ -34,18 +46,24 @@ const Footer = styled<{}, "div" & React.HTMLProps<HTMLInputElement>>("div")`
 interface IHomeProps {
     storybookActions: typeof storybookActions;
     storybooks: List<StorybookProps>;
+    httpCallsInProgress: boolean;
     history: History;
 }
 interface IHomeState {
     selectedStorybook?: StorybookProps;
 }
-class Home extends React.PureComponent<IHomeProps, IHomeState> {
+class Home extends React.Component<IHomeProps, IHomeState> {
     public state: IHomeState = {
         selectedStorybook: undefined
     };
 
     public componentDidMount() {
+        console.log("Home did mount", this.props.history);
         this.props.storybookActions.fetchStart();
+    }
+
+    public componentWillReceiveProps(nextProps: IHomeProps) {
+        console.log("next props: ", nextProps.storybooks);
     }
 
     public componentWillUnmount() {
@@ -56,18 +74,19 @@ class Home extends React.PureComponent<IHomeProps, IHomeState> {
     }
     public render() {
         const { storybooks } = this.props;
+
         return (
             <HomeContainer>
                 <SectionWrapper marginBottom={3.28}>
                     <About />
                 </SectionWrapper>
-                <SectionWrapper marginBottom={3.28}>
+                <StorybookListWrapper marginBottom={3.28}>
                     <StorybookList
                         onClickStorybook={this.onClickStorybook}
                         storybooks={storybooks}
                     />
                     {this.renderStorybookPreview()}
-                </SectionWrapper>
+                </StorybookListWrapper>
                 <Footer>
                     <ServiceInfo />
                 </Footer>
@@ -100,7 +119,8 @@ class Home extends React.PureComponent<IHomeProps, IHomeState> {
 }
 
 const mapStateToProps = (state: IRootReducersState) => ({
-    storybooks: state.scenes.home.get("storybooks")
+    storybooks: state.scenes.home.get("storybooks"),
+    httpCallsInProgress: state.common.http.httpCallsInProgress
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({

@@ -10,7 +10,6 @@ export const READ_STORYBOOK = "storybook/READ_STORYBOOK";
 export const actionCreators = {
     // fetchStart: createAction(FETCH_STORYBOOKS_STARTED),
     fetchStart: () => {
-        console.log("hello action");
         return {
             type: FETCH_STORYBOOKS_STARTED
         };

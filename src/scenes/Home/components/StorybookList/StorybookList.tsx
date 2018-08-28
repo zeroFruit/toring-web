@@ -10,7 +10,7 @@ interface IStorybookListProps {
     onClickStorybook(storybookID: number): void;
 }
 
-class StorybookList extends React.PureComponent<IStorybookListProps> {
+class StorybookList extends React.Component<IStorybookListProps> {
     public render() {
         return (
             <InfiniteCarousel

@@ -8,7 +8,7 @@ interface IInfiniteCarouselProps {
     cellSpacing: number;
 }
 
-class InfiniteCarousel extends React.PureComponent<IInfiniteCarouselProps> {
+class InfiniteCarousel extends React.Component<IInfiniteCarouselProps> {
     public render() {
         const { slidesToShow, slidesToScroll, slideWidth, cellSpacing } = this.props;
         return (
