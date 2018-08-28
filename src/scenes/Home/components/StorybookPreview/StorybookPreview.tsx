@@ -117,7 +117,15 @@ class StorybookPreview extends React.PureComponent<IStorybookPreviewProps> {
                         </ViewButton>
                     </ViewContainer>
                 </Content>
-                <Preview src={storybook.previews[0].srcSet[0].url} width={20} height={20} />
+                <Preview
+                    src={storybook.previews
+                        .get(0)
+                        .get("srcSet")
+                        .get(0)
+                        .get("url")}
+                    width={20}
+                    height={20}
+                />
             </StorybookPreviewWrapper>
         );
     }

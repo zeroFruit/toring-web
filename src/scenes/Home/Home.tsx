@@ -12,6 +12,7 @@ import { List } from "immutable";
 import { ID, StorybookProps } from "./data/storybook";
 import { findByID } from "./data/storybook/reducers";
 import { History } from "history";
+import mockStorybookList from "../../data/mock/mockStorybookList";
 
 interface ISectionWrapperProps {
     marginBottom: number;
@@ -57,14 +58,14 @@ class Home extends React.Component<IHomeProps, IHomeState> {
         selectedStorybook: undefined
     };
 
-    public componentDidMount() {
-        console.log("Home did mount", this.props.history);
-        this.props.storybookActions.fetchStart();
-    }
-
-    public componentWillReceiveProps(nextProps: IHomeProps) {
-        console.log("next props: ", nextProps.storybooks);
-    }
+    // public componentDidMount() {
+    //     console.log("Home did mount", this.props.history);
+    //     this.props.storybookActions.fetchStart();
+    // }
+    //
+    // public componentWillReceiveProps(nextProps: IHomeProps) {
+    //     console.log("next props: ", nextProps.storybooks);
+    // }
 
     public componentWillUnmount() {
         this.setState(s => ({
@@ -104,7 +105,7 @@ class Home extends React.Component<IHomeProps, IHomeState> {
     };
 
     private onClickStorybook = (storybookID: ID): void => {
-        const storybook = findByID(this.props.storybooks, storybookID);
+        const storybook = findByID(mockStorybookList, storybookID);
         this.setState(s => ({
             ...s,
             selectedStorybook: storybook
@@ -112,7 +113,6 @@ class Home extends React.Component<IHomeProps, IHomeState> {
     };
 
     private onClickStorybookView = (storybookID: ID) => {
-        console.log(storybookID);
         this.props.storybookActions.select(storybookID);
         this.props.history.push("/viewer");
     };

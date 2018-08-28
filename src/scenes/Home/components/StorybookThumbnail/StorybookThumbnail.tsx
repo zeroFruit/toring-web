@@ -28,7 +28,16 @@ const StorybookThumbnail: React.SFC<IStorybookThumbnailProps> = ({
     previews,
     onClick
 }) => {
-    return <ThumbnailImage src={previews[0].srcSet[0].url} onClick={() => onClick(storybookID)} />;
+    return (
+        <ThumbnailImage
+            src={previews
+                .get(0)
+                .get("srcSet")
+                .get(0)
+                .get("url")}
+            onClick={() => onClick(storybookID)}
+        />
+    );
 };
 
 export default StorybookThumbnail;

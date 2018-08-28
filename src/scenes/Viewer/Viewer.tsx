@@ -109,7 +109,7 @@ class Viewer extends React.PureComponent<IViewerProps, IViewerState> {
                 <ShowPanelOnHoverZone height={"5.55rem"}>
                     <ControlPanel>
                         <Controller
-                            totalPages={mockStorybookList.length}
+                            totalPages={mockStorybookList.size}
                             currentPage={currentPage}
                             onClickNext={() => this.onClickNext()}
                             onClickPrev={() => this.onClickPrev()}
