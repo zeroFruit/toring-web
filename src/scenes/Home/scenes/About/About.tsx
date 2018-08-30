@@ -19,7 +19,7 @@ const AboutContainer = styled<
   IAboutContainerProps,
   "div" & React.HTMLProps<HTMLInputElement>
 >("div")`
-  height: ${props => props.height}rem;
+  min-height: ${props => props.height}rem;
   background-image: url(${props => props.backgroundUrl});
   background-repeat: no-repeat;
   background-attachment: fixed;
