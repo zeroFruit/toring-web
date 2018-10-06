@@ -19,7 +19,7 @@ const AboutContainer = styled<
   IAboutContainerProps,
   "div" & React.HTMLProps<HTMLInputElement>
 >("div")`
-  min-height: ${props => props.height}rem;
+  height: ${props => props.height}rem;
   background-image: url(${props => props.backgroundUrl});
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -29,7 +29,7 @@ const AboutContainer = styled<
 class About extends React.PureComponent {
   public render() {
     return (
-      <AboutContainer height={29.33} backgroundUrl={backgroundImage.src}>
+      <AboutContainer height={27} backgroundUrl={backgroundImage.src}>
         <AboutContent />
       </AboutContainer>
     );

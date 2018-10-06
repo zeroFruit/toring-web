@@ -17,16 +17,17 @@ const ContentImg = styled<
   {},
   "img" & React.HTMLProps<HTMLImageElement>
 >("img")`
-  width: 35%;
-  height: 35%;
-  margin: 30% auto 1rem;
+  width: 57%;
+  height: 55%;
+  margin: 13% auto 1rem;
 `;
 
 const ContentTitle = styled<
   {},
   "div" & React.HTMLProps<HTMLInputElement>
 >("div")`
-  font-size: 1.3rem;
+  font-size: 1rem;
+  font-weight: 600;
   margin-bottom: 1rem;
 `;
 
@@ -34,7 +35,7 @@ const ContentDescription = styled<
   {},
   "div" & React.HTMLProps<HTMLInputElement>
 >("div")`
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 `;
 
 interface IAboutContentDetailProps {
